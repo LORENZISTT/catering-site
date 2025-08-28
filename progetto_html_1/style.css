@@ -1,0 +1,444 @@
+/* ! Reset */
+body,
+html {
+    background-color: #f5f5f5;
+    font-family: 'Intro', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+    margin: 0 0 1rem 0;
+    padding: 0;
+}
+
+ol,
+ul {
+    list-style-type: none;
+}
+
+img {
+    height: auto;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+h5 {
+    font-size: 0.8rem;
+}
+
+h6 {
+    font-size: 0.6rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ! Global */
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.logo {
+    transform: translateY(22px);
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.logo img {
+    border-radius: 70%;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 4px;
+    margin: 3px;
+    border-radius: 5px;
+    background-color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.navlinks {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    gap: 15px;
+    padding: 10px;
+    color: black;
+}
+
+.navlinks li a {
+    color: black;
+    font-weight: 500;
+    margin: 160px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navlinks li a {
+    text-align: center;
+    padding: 5px;
+}
+
+.navlinks li a:hover {
+    transition: all 0.3s ease-in-out;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.navlinks li a:not(:hover) {
+    transition: all 0.3s ease-in-out;
+}
+
+.cta {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta a {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.cta:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.cta:not(:hover) {
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .navlinks {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        height: 100vh;
+        width: 50%;
+        transition: all 0.3s ease-in-out;
+        z-index: 100;
+    }
+
+    .navlinks.show {
+        left: 0;
+        transition: all 0.3s ease-in-out;
+        background-color: rgb(243, 236, 236);
+    }
+
+    .navlink1 {
+        position: absolute;
+        top: -100px;
+        left: -150px;
+    }
+
+    .navlink2 {
+        position: absolute;
+        top: -50px;
+        left: -150px;
+    }
+
+    .navlink3 {
+        position: absolute;
+        top: -5px;
+        left: -150px;
+    }
+
+    .logo {
+        z-index: 101;
+        position: relative;
+        top: 0;
+        right: -400px;
+    }
+
+    .cta {
+        position: absolute;
+        bottom: 20px;
+        left: 10px;
+    }
+}
+
+.container {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+.immagine {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.testo {
+    position: absolute;
+    top: 100px;
+    right: 400px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .testo {
+        position: absolute;
+        top: 100px;
+        right: 50px;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+    }
+}
+
+.titolo {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    overflow: hidden;
+    margin: 20px;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    text-align: center;
+    padding: 10px;
+    height: auto;
+    border-radius: 10px;
+    background-color: white;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card img {
+    border-radius: 50%;
+    padding: 10px;
+    margin: 0 auto;
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+.card:hover {
+    transform: scale(1.03);
+    transition: all 0.3s ease-in-out;
+}
+
+.card:not(hover) {
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+}
+
+.recensioni {
+    margin: 40px;
+}
+
+.recensioni img {
+    display: block;
+    margin: 20px auto;
+}
+
+.recensioni2 {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: flex-start;
+    margin: 20px;
+    gap: 15px;
+}
+
+.rec1, .rec2, .rec3 {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-size: 18px;
+    color: #333;
+    line-height: 1.4;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rec1 h2, .rec2 h2, .rec3 h2 {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.rec1, .rec2, .rec3 {
+    margin: 20px auto;
+}
+
+@media (max-width: 768px) {
+    .recensioni2 {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+.change {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #000000;
+    color: white;
+    text-transform: uppercase;
+    width: 100px;
+    height: 70px;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 50%;
+    user-select: none;
+    transition: all 0.3s ease;
+}
+
+/* DARK MODE STYLES */
+.dark {  
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.dark .navbar {
+    background-color: #2d2d2d;
+}
+
+.dark .hamburger span {
+    background-color: white;
+}
+
+.dark .navlinks li a {
+    color: white;
+}
+
+.dark .navlinks li a:hover {
+    background-color: white;
+    color: black;
+}
+
+.dark .cta {
+    background-color: white;
+    color: black;
+}
+
+.dark .cta a {
+    color: black;
+}
+
+.dark .navlinks.show {
+    background-color: #2d2d2d;
+}
+
+.dark .titolo {
+    color: white;
+}
+
+.dark .card {
+    background-color: #2d2d2d;
+    color: white;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.dark .rec1, 
+.dark .rec2, 
+.dark .rec3 {
+    background-color: #2d2d2d;
+    color: white;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.dark .rec1 h2, 
+.dark .rec2 h2, 
+.dark .rec3 h2 {
+    color: white;
+}
